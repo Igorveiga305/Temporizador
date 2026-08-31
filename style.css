@@ -5,3 +5,72 @@
     box-sizing: border-box;
     font-family: 'Courier New', Courier, monospace;
 }
+
+main{
+    
+    padding: 2rem;
+    border-radius: 5%;
+    background-color: rgb(39, 36, 39);
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(180deg,rgb(199, 18, 169),rgb(155, 10, 131));
+}
+
+.temporizador{
+    font-size: 30px;
+    border: 8px solid #746acf;
+    border-radius: 100%;
+    width: 350px;
+    height: 350px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 1.5rem;
+}
+
+.contador{
+    color: white;    
+}
+
+.botoes{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.botoes i{
+    font-size: 1.7rem;
+    
+}
+
+.botoes button{
+    padding: 1rem 2.5rem;
+    cursor: pointer;
+    border-radius: 5%;
+    background-color: #ffff;
+    transition: 1s ease;
+
+}
+
+.botoes button:hover{
+    background-color: #c9c9c9;
+}
+
+.marcadores{
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.marcadores p:first-child{
+    margin-top: 1.5rem;
+}
