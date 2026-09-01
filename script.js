@@ -37,4 +37,16 @@ const settimer = (contador) => {
     timerEL.innerText = formattimer(contador);
 };
 
+const resetTimer = () => {
+    clearInterval(intervalID);
+    timer = 0;
+    marks = [];
+    settimer(timer);
+    marksList.innerHTML = '';
+    const button = document.getElementById('power');
+    button.getAttribute('action','start');
+    button.innerHTML = '<i class="fa-solid fa-play"></i>';
+}
+
 document.getElementById('power').addEventListener('click', toggletimer);
+document.getElementById('restart').addEventListener('click', resetTimer);
