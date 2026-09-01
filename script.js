@@ -13,6 +13,15 @@ const formattimer = (contador) => {
     return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}:${hundredths.toString().padStart(2, '0')}`;
 };
 
+const addMarkToList = (markIndex, marktime) => {
+    marksList.innerHTML += `<p>Marca ${markIndex}: ${formattimer(marktime)}</p>`
+};
+
+const markTime = () => {
+    marks.push(timer);
+    addMarkToList(marks.length,timer);
+}
+
 const toggletimer = () => {
     const button = document.getElementById("power");
     const action = button.getAttribute("action");
@@ -49,4 +58,5 @@ const resetTimer = () => {
 }
 
 document.getElementById('power').addEventListener('click', toggletimer);
+document.getElementById('mark').addEventListener('click', markTime);
 document.getElementById('restart').addEventListener('click', resetTimer);
